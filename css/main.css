@@ -1,0 +1,48 @@
+body {
+	background-color: #fff;
+}
+
+.wrapper {
+	margin: auto;
+	width: 960px;
+	height: 512px;
+	margin: 75px auto 0px auto;
+}
+
+.harvey {
+	background-image: url("../images/matt_harvey.jpg");
+	background-repeat: no-repeat;
+	width: 300px;
+	height: 512px;
+	float: left;
+}
+
+.text {
+	width: 620px;
+	height: 512px;
+	float: left;
+	text-align: center;
+	padding: 20px;
+	font-family: 'Luckiest Guy', cursive;
+	font-size: 300%;
+	color: orange;
+	text-shadow: 2px 2px 0px navy;
+}
+
+.question {
+	text-align: left;
+}
+
+.start p {
+	margin: 35px auto;
+}
+
+.startbutton {
+	text-shadow: 2px 2px 0px navy;
+	background-color: #bdbdbd;
+	border-radius: 10px;
+}
+
+.startbutton:hover {
+	background-color: #0049a8;
+}
