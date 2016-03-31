@@ -25,24 +25,53 @@ body {
 	padding: 20px;
 	font-family: 'Luckiest Guy', cursive;
 	font-size: 300%;
-	color: orange;
-	text-shadow: 2px 2px 0px navy;
+	color: #ffa500;
+	text-shadow: 2px 2px 0px #000080;
 }
 
-.question {
+.question, .rightwrong, .final {
+	display: none;
+	font-size: 70%;
+}
+
+.question, .rightwrong {
 	text-align: left;
+}
+
+.question_num {
+	text-align: center;
+	color: #326db9;
+}
+
+.submitbutton, .nextbutton {
+	text-align: center;
 }
 
 .start p {
 	margin: 35px auto;
 }
 
-.startbutton {
-	text-shadow: 2px 2px 0px navy;
-	background-color: #bdbdbd;
-	border-radius: 10px;
+.question p {
+	margin-top: 0px;
+	margin-bottom: 10px;
 }
 
-.startbutton:hover {
+.answertext {
+	margin: 20px auto;
+}
+
+input[type="radio"] {
+	margin: 0px 10px 27px 40px;
+}
+
+button {
+	text-shadow: 2px 2px 0px #000080;
+	background-color: #bdbdbd;
+	border-radius: 10px;
+	font-size: 90%;
+	letter-spacing: 0.04em;
+}
+
+button:hover {
 	background-color: #0049a8;
 }
