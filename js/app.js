@@ -23,7 +23,7 @@ $(document).ready(function() {
 		qNum: 3,
 		answers: ["July 26, 2012", "June 11, 2011", "August 9, 2013", "September 4, 2012"],
 		correct: "July 26, 2012",
-		fact: "Matt made his Major League debut against the Arizona Diamondback on July 26, 2012."
+		fact: "Matt made his Major League debut against the Arizona Diamondbacks on July 26, 2012."
 		},
 		{
 		question: "Who was a childhood idol of Matt's?",
@@ -40,13 +40,15 @@ $(document).ready(function() {
 		fact: "Matt's favorite NFL football team is the New England Patriots."
 	}];
 
-	// what to do when start button is clicked
+	// what to do when START or NEXT button is clicked
 	$(".next").click(function() {
 
+		//remove all question/answer text
 		$(".question p").remove();
 		$(".answertext").children().remove();
 		$(".choicetext").remove;
 
+		//create question/answer text
 		if ( currentQuestion < totalQuestions) {
 
 			for (var i = questions[currentQuestion].answers.length - 1; i >= 0; i--) {
@@ -61,6 +63,7 @@ $(document).ready(function() {
 			$(".question").show();
 
 		}
+		//create final screen
 		else if ( currentQuestion == totalQuestions ) {
 			$(".final").prepend("<p>Would you like to try again?</p>");
 			$(".final").prepend("<p>You got " + numCorrect + " right!</p>");
@@ -69,6 +72,7 @@ $(document).ready(function() {
 			$(".final").show();
 			currentQuestion++;
 		}
+		//go back to start and reset counters
 		else {
 			$(".final p").remove();
 			$(".final").hide();
@@ -79,18 +83,23 @@ $(document).ready(function() {
 
 	});
 
+	// what to do when SUBMIT button is clicked
 	$(".answer").click(function() {
 
+		//remove all correct/fact text
 		$(".rightwrong p").remove();
 
  		var answer = $("input[type='radio']:checked").val();
  		
  		if ( answer === undefined ) {
+ 			//don't do anything if nothing has been chosen and SUBMIT is clicked
  			event.preventDefault();
  		}
+ 		//check if correct or incorrect and output relevant feedback
  		else {
  			if ( answer == questions[currentQuestion].correct) {
 				$(".rightwrong").prepend("<p>You are correct!</p>");
+				//increase number correct counter by one
 				numCorrect++;
 			}
 			else {

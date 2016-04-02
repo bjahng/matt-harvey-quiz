@@ -71,6 +71,7 @@ button {
 	border-radius: 10px;
 	font-size: 90%;
 	letter-spacing: 0.05em;
+	outline: 0;
 }
 
 button:hover {
