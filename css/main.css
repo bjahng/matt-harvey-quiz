@@ -24,6 +24,7 @@ body {
 	text-align: center;
 	padding: 20px;
 	font-family: 'Luckiest Guy', cursive;
+	letter-spacing: 0.03em;
 	font-size: 300%;
 	color: #ffa500;
 	text-shadow: 2px 2px 0px #000080;
@@ -34,7 +35,7 @@ body {
 	font-size: 70%;
 }
 
-.question, .rightwrong {
+.question {
 	text-align: left;
 }
 
@@ -69,7 +70,7 @@ button {
 	background-color: #bdbdbd;
 	border-radius: 10px;
 	font-size: 90%;
-	letter-spacing: 0.04em;
+	letter-spacing: 0.05em;
 }
 
 button:hover {
